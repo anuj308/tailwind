@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 flex items-center justify-center h-screen">
+  <div class="text-center">
+    <h1 class="text-4xl font-bold mb-8">Tic Tac Toe</h1>
+    <div class="grid grid-cols-3 gap-4 w-64 h-64 mx-auto">
+      <!-- Tic Tac Toe Grid -->
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="0"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="1"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="2"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="3"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="4"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="5"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="6"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="7"></div>
+      <div class="cell bg-white border border-gray-300 flex items-center justify-center text-3xl font-bold cursor-pointer hover:bg-gray-100" data-index="8"></div>
+    </div>
+    <p class="mt-4 text-xl font-semibold" id="status">Player X's Turn</p>
+    <button class="mt-6 px-6 py-2 bg-blue-500 text-white font-bold rounded hover:bg-blue-600" id="reset">Reset Game</button>
+  </div>
+
+  <script>
+    // Game State
+    let board = Array(9).fill(null); // Represents the 3x3 grid
+    let currentPlayer = 'X'; // X starts first
+    let gameActive = true;
+
+    // Winning Combinations
+    const winningCombinations = [
+      [0, 1, 2], [3, 4, 5], [6, 7, 8], // Rows
+      [0, 3, 6], [1, 4, 7], [2, 5, 8], // Columns
+      [0, 4, 8], [2, 4, 6]             // Diagonals
+    ];
+
+    // DOM Elements
+    const cells = document.querySelectorAll('.cell');
+    const status = document.getElementById('status');
+    const resetButton = document.getElementById('reset');
+
+    // Handle Cell Click
+    cells.forEach(cell => {
+      cell.addEventListener('click', handleCellClick);
+    });
+
+    // Reset Game
+    resetButton.addEventListener('click', resetGame);
+
+    function handleCellClick(event) {
+      const cell = event.target;
+      const index = cell.getAttribute('data-index');
+
+      if (board[index] || !gameActive) return; // If cell is already filled or game is over
+
+      board[index] = currentPlayer; // Update board
+      cell.textContent = currentPlayer; // Update UI
+
+      if (checkWin()) {
+        status.textContent = `Player ${currentPlayer} Wins!`;
+        gameActive = false;
+        return;
+      }
+
+      if (board.every(cell => cell !== null)) {
+        status.textContent = "It's a Draw!";
+        gameActive = false;
+        return;
+      }
+
+      currentPlayer = currentPlayer === 'X' ? 'O' : 'X'; // Switch players
+      status.textContent = `Player ${currentPlayer}'s Turn`;
+    }
+
+    function checkWin() {
+      return winningCombinations.some(combination => {
+        return combination.every(index => {
+          return board[index] === currentPlayer;
+        });
+      });
+    }
+
+    function resetGame() {
+      board.fill(null); // Clear the board
+      cells.forEach(cell => {
+        cell.textContent = ''; // Clear the UI
+      });
+      currentPlayer = 'X'; // Reset to X
+      gameActive = true; // Reactivate the game
+      status.textContent = `Player ${currentPlayer}'s Turn`;
+    }
+  </script>
+</body>
+</html>

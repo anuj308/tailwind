@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>css & form</title>
+    <style>
+      body{
+        padding: 0;
+        margin: 0;
+        background-color: black;
+        /* background-image: url(); */
+        color: white;
+      }
+      .nav{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+      }
+      .nav div{grid
+        font-size: 20px;
+        padding: 10px;
+        margin: 10px 10px;
+        border-radius: 15px;
+      }
+      .nav div:hover{
+        background-color: aliceblue;
+        color: black;
+      }
+      form{
+        font-size: 19px;
+        margin: 0px 300px;
+        /* padding: 10px 50px; */
+        text-align:left;
+      }
+      fieldset{
+        padding: 10px 50px;
+        border-radius: 18px;
+      }
+      form input{
+        border-radius: 10px;
+        padding: 5px 5px;
+        margin: 2px 5px;
+      }
+      .btn{
+        padding: 8px;
+        font-size: 17px;
+      }
+      .btn:hover{
+        padding: 10px;
+      }
+      footer{
+        text-align: center;
+        margin: 100px 10px 10px 0px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="nav">
+      <div>Home</div>
+      <div>About</div>
+      <div>Contact us</div>
+    </div>
+    <h1 align="center">Form</h1>
+    <form action="">
+      <fieldset>
+        <legend align="center">Application Form</legend>
+        1. Name:
+        <input type="text" name="" placeholder="Enter your name" /><br /><br />
+        2. Email:
+        <input
+          type="email"
+          name=""
+          placeholder="Enter your email"
+        /><br /><br />
+        3. Phone no:
+        <input typ
+        e="number" name="" /><br /><br />
+        4. Password:
+        <input type="password" name="" /><br /><br />
+        5. Date Of Birth:
+        <input type="date" name="" /><br /><br />
+        6. Local Date:
+        <input type="datetime-local" name="" /><br /><br />
+        7. Gender:
+        <input type="radio" name="gender" /> Male
+        <input type="radio" name="gender" /> Female
+        <input type="radio" name="gender" /> Other<br /><br />
+        8. Hobbies:
+        <input type="checkbox" name="" /> Dancing<br />
+        <input type="checkbox" name="" /> Swimming <br />
+        <input type="checkbox" name="" /> Football <br />
+        9. Range:
+        <input type="range" />
+        <br />
+        <br />
+        10. Country:
+        <select>
+          <option value="">India</option>
+          <option value="">China</option>
+          <option value="">Russia</option>
+        </select>
+        <br />
+        <br />
+        <input type="submit" class="btn"/>
+        <input type="reset" class="btn"/>
+      </fieldset>
+    </form>
+    <footer>
+      you have reached the end
+    </footer>
+  </body>
+</html>

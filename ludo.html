@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #ludoBoard{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .ludo{
+            height: 6.5vh;
+            width: 6.4vw;
+            border: 1px solid;
+        }
+        #road{
+            /* border-radius: 12px; */
+            border-color: black;
+        }
+        #first{
+            background-color: red;
+            border-color: red;
+        }
+        #second{
+            background-color: green;
+            border-color: green;
+        }
+        #third{
+            background-color: yellow;
+            border-color: yellow;
+        }
+        #fourth{
+            background-color: blue;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="ludoBoard">
+
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- -->
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- -->
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- -->
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- -->
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- -->
+
+        <!-- -----  -->
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+        <div class="ludo" id="second"></div>
+
+        <!-- ---- first and second  -->
+
+
+        <!-- ----- road -->
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="second"></div><!-- home for second -->
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+
+        <!-- ---- -->
+        <!-- ----- road -->
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+        <div class="ludo" id="first"></div>
+
+        <div class="ludo" id="first"></div><!-- home for first -->
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="third"></div><!-- home for third -->
+
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="road"></div>
+
+        <!-- ---- -->
+        <!-- ----- road -->
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="fourth"></div> <!-- home for fourth -->
+        <div class="ludo" id="road"></div>
+
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="road"></div>
+        <div class="ludo" id="third"></div>
+        <div class="ludo" id="road"></div>
+
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+        <!-- ---- third and fourth -->
+
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+         <div class="ludo" id="fourth"></div>
+        
+         
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="road"></div>
+         <div class="ludo" id="road"></div>
+ 
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+         <div class="ludo" id="third"></div>
+ 
+         <!-- ---- -->
+    </div>
+</body>
+</html>
