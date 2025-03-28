@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>function classes</title>
+    <title>About</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
@@ -23,17 +23,10 @@
             <input type="text" class="px-2 py-2 border" placeholder="Enter password">
             <input type="submit" value="Submit" class="bg-red-300 text-black px-3 py-3 rounded-2xl mt-3">
         </form>
-        <div class="flex flex-col  border">
-            <input type="text"  id="form" class="px-2 py-2 border" placeholder="Enter photo url">
-            <div onclick="addCard()" class="bg-red-300 text-black px-3 py-3 rounded-2xl mt-3">Submit</div>
-        </div>
-    </div>
-    <div id="divv" class="p-3 space-x-4 space-y-4">
-
     </div>
     <div class="min-h-[80vh]">
-        <img src="https://imgs.search.brave.com/OIRecmsGTMIERIP_NB6JtGSsfZUNcX-H0qDEt-fyhUU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z3N0YXRpYy5jb20v/YWl0ZXN0a2l0Y2hl/bi93ZWJzaXRlL2Nv/bnRlbnQvaW1hZ2Ut/ZngtcGxlYXNlLXNp/Z24taW4ud2VicA" alt="image" class="cover">
-        <h1 class="text-3xl text-center font-bold mt-3"> Welcome to our website </h1>
+        <!-- <img src="https://imgs.search.brave.com/OIRecmsGTMIERIP_NB6JtGSsfZUNcX-H0qDEt-fyhUU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/Z3N0YXRpYy5jb20v/YWl0ZXN0a2l0Y2hl/bi93ZWJzaXRlL2Nv/bnRlbnQvaW1hZ2Ut/ZngtcGxlYXNlLXNp/Z24taW4ud2VicA" alt="image" class="size-full"> -->
+        <h1 class="text-3xl text-center font-bold mt-3"> About us</h1>
         <p class="text-center mb-3"> Please fill the form to be the part of our joureny </p>
        
     </div>
@@ -46,24 +39,5 @@
         <div> footer </div>
         <div> footer </div>
     </div>
-    <script>
-        function toggle(){
-            let card = document.getElementById('card')
-            if(card.classList.contains('hidden')){
-                card.classList.remove('hidden')
-            }else{
-                card.classList.add('hidden')
-            }
-        }
-        function addCard(){
-            let div = document.getElementById('divv')
-            let img = document.createElement('img')
-            let url = document.getElementById('form').value
-            img.src = url
-            img.classList.add('w-60', 'h-60', 'rounded-full', 'border-2', 'border-red-300')
-            div.appendChild(img)
-            console.log(url)
-        }
-    </script>
 </body>
 </html>
