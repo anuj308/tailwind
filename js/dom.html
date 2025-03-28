@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="division">
+        <h1 id="head">Dom - Document Object Model</h1>
+    </div>
+    <Button id="changeColor">Change the text color</Button>
+    <Button id="changeBg">Change the Bg color</Button>
+    <Button id="createEle">Creating the element</Button>
+    <Button id="changeClass">Changing the class</Button>
+</body>
+<script>
+    let head = document.getElementById('head')
+    let changeColor = document.getElementById('changeColor')
+    let changeBg = document.getElementById('changeBg')
+    let createEle = document.getElementById('createEle')
+    let division = document.getElementById('division')
+    changeColor.addEventListener('click',colorChange)
+    changeBg.addEventListener('mouseover',function(){
+        head.style.backgroundColor= "green"
+    })
+    createEle.addEventListener('click',function(){
+        let a = document.createElement('h1')
+        a.innerHTML= "Our new created element"
+        division.appendChild(a)
+    })
+    function colorChange(){
+        head.style.color = "red";
+    }
+</script>
+
+
+</html>
