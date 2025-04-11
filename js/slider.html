@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Slider</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  </head>
+  <body>
+    <main class="w-[70%] h-[80vh] mx-auto relative mt-[100px] overflow-hidden">
+      <img
+        class="slides size-full absolute transition-all"
+        src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+        alt=""
+      />
+      <img
+        class="slides size-full absolute transition-all"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYm4FDNL9e2nQaBIcZNWFWmcROfUPyQKGUbYZtb890s04dJFGuoP08LpZyYSlZ5SGnShA&usqp=CAU"
+        alt=""
+      />
+      <img
+        class="slides size-full absolute transition-all"
+        src="https://st5.depositphotos.com/17999088/73796/i/450/depositphotos_737960040-stock-photo-beautiful-sunset-wood.jpg"
+        alt=""
+      />
+      <img
+        class="slides size-full absolute transition-all"
+        src="https://images.pexels.com/photos/20303/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+        alt=""
+      />
+      <button
+        class="border text-xl bg-green-300 px-6 py-3 rounded-xl absolute top-[45%]" id="prev" onclick="prev()"
+      >
+        prev
+      </button>
+      <button
+        class="border text-xl bg-green-300 px-6 py-3 rounded-xl absolute top-[45%] right-[0]" id="next" onclick="next()"
+      >
+        next
+      </button>
+    </main>
+    <script>
+      let slides = document.querySelectorAll(".slides");
+      let count=0;
+      slides.forEach(
+        (slides,index)=>{
+            slides.style.left = `${index * 100}%`
+        }
+      )
+    //   0 - 0% , 1 - 100% , 2 - 200% , 3 - 300% - distance from left
+    function slider(){
+        slides.forEach((slides)=>{
+            slides.style.transform = `translateX(-${count * 100}%)`
+        })
+    }
+    const prev = ()=>{
+        if(count==0){
+            count=3;
+            slider()
+        }else{
+            count--;
+            slider();
+        }
+    }
+    const next =()=>{
+        if(count==3){
+            count=0;
+            slider();
+        }else{
+            count++;
+            slider();
+        }
+    }
+    </script>
+  </body>
+</html>
