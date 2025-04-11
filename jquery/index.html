@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="jq.js"></script>
+</head>
+<body>
+    <script>
+        $(document).ready(()=>{
+            $('#btn').click(()=>{
+                console.log("hi i am btn id div");
+                event.stopPropagation(); // now only when click in btn it will run only this function not div
+            })
+            $('div').click(()=>{
+                console.log("hi i am div")
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>to do</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+    <div class="flex flex-col items-center justify-center">
+        <h1 class="m-3 font-bold">Dynamic Task Manager</h1>
+        <div class="mt-4">
+            <input id="task" type="text" class="p-2" placeholder="Enter your task">
+            <button onclick="addTask()" class="p-2 bg-red-300 rounded-2xl">Add Task</button>
+        </div>
+        <div id="tasks">
+            <!-- <div class="flex " id="1" onclick="fun(id)">
+                <div></div><button class="p-1 bg-amber-600" >edit</button><button class="p-1 bg-red-600">delete</button>
+            </div> -->
+        </div>
+    </div>
+    <Script>
+        let c = 0;
+        const addTask = () => {
+            let task = document.getElementById('task').value;
+            let tasks = document.getElementById('tasks');
+            let div = document.createElement('div');
+            div.innerHTML = `<div class="flex p-3 space-x-2 bg-amber-100 w-full" id="box${c}">
+                <div id="task${c}" class="p-1 w-50">${task}</div><button id="edit${c}" class="p-1 bg-amber-600" onclick="editTask(id)">edit</button><button id="delete${c}" onclick="deleteTask(id)" class="p-1 bg-red-600">delete</button>
+            </div>`;
+            tasks.appendChild(div);
+            task.value = "";
+            c++;
+        }
+        const editTask = (idStr)=>{
+            let id = idStr.substring(4, idStr.length);
+            // let id = idStr[4];
+            let val = prompt("enter your task");
+            console.log(id,val)
+            document.getElementById(`task${id}`).innerText = val;
+            const a = document.getElementById('box')
+            console.log(a)
+        }
+        const deleteTask  = (idStr)=>{
+            let id = idStr.substring(6, idStr.length);
+            console.log(id);
+            console.log("asd")
+            let c = document.getElementById(`box${id}`);
+            c.classList.add("hidden")
+            // console.log(c)
+        }
+    </Script>
+</body>
+</html>
